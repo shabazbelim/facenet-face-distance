@@ -42,6 +42,10 @@ def main(args):
             
             dist = np.sqrt(np.sum(np.square(np.subtract(emb[0,:], emb[1,:]))))
             print('Distance between images: ', dist)
+            if dist < 1: 
+                print("Same images") 
+            else:
+                print("Different images")
             
             
 def load_and_align_data(image_paths, image_size, margin, gpu_memory_fraction):
